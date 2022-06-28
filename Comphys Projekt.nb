@@ -1,0 +1,783 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     34268,        775]
+NotebookOptionsPosition[     31754,        732]
+NotebookOutlinePosition[     32194,        749]
+CellTagsIndexPosition[     32151,        746]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["X02_", "Title"]], "Subtitle",
+ CellChangeTimes->{{3.865056521278922*^9, 3.865056525404893*^9}, 
+   3.865136431655771*^9, 
+   3.865136506369796*^9},ExpressionUUID->"e64dcb6c-8acd-48ab-81f5-\
+c0e223887505"],
+
+Cell["Maxwell Gleichungen", "Subtitle",
+ CellChangeTimes->{{3.8651364648048534`*^9, 3.865136501488289*^9}, 
+   3.865142170494754*^9},ExpressionUUID->"d2e0e79b-6b55-4346-bd92-\
+06aa6fa2d034"],
+
+Cell["\<\
+Grundlage der Betrachtung elektromagnetischer Wellen bilden die \
+Maxwellgleichungen in Materie:\
+\>", "Text",
+ CellChangeTimes->{{3.8651365341244874`*^9, 3.865136592015374*^9}, {
+   3.865137429418951*^9, 3.865137451486821*^9}, 3.865141142267309*^9, {
+   3.8651414803910837`*^9, 
+   3.865141483743882*^9}},ExpressionUUID->"42937def-ec39-4c76-8dfe-\
+664ad7c456c0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Del]", "\[CenterDot]", 
+   OverscriptBox["B", "\[RightVector]"]}], " ", "=", 
+  "0"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Del]", "\[CenterDot]", 
+   OverscriptBox["D", "\[RightVector]"]}], " ", "=", 
+  "\[Rho]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Del]", "\[Cross]", 
+   OverscriptBox["E", "\[RightVector]"]}], " ", "=", 
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["\[PartialD]", 
+     RowBox[{"\[PartialD]", "t"}]]}], "\[CenterDot]", 
+   OverscriptBox["B", "\[RightVector]"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Del]", "\[Cross]", 
+   OverscriptBox["H", "\[RightVector]"]}], " ", "=", 
+  RowBox[{
+   OverscriptBox["j", "\[RightVector]"], "+", 
+   RowBox[{
+    FractionBox["\[PartialD]", 
+     RowBox[{"\[PartialD]", "t"}]], 
+    OverscriptBox["D", "\[RightVector]"]}]}]}]}], "Input",
+ CellChangeTimes->{{3.8651374569474773`*^9, 3.865137520557308*^9}, {
+   3.865138159385531*^9, 3.865138258162797*^9}, {3.865138306042659*^9, 
+   3.865138403442255*^9}, {3.865138477077242*^9, 3.865138612524542*^9}, {
+   3.865138724799221*^9, 3.865138731832402*^9}, {3.865139730069773*^9, 
+   3.865139749216598*^9}, {3.8651398469619064`*^9, 3.8651398523383074`*^9}, {
+   3.865139901936945*^9, 3.865139964732957*^9}, {3.865140025310794*^9, 
+   3.8651400503543167`*^9}, {3.86514044577757*^9, 3.865140483358333*^9}, {
+   3.865140532840683*^9, 3.8651405340371485`*^9}, {3.865140637746815*^9, 
+   3.8651407259860373`*^9}, {3.8651409432168984`*^9, 3.865140970614452*^9}, {
+   3.8651411027713456`*^9, 3.8651411392669697`*^9}, {3.865141179214129*^9, 
+   3.865141220962923*^9}, 3.865141625824688*^9, {3.8652180475262055`*^9, 
+   3.8652180525128536`*^9}},ExpressionUUID->"dee939d9-a0a6-4c09-a828-\
+20259d82c0e2"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "prebin", 
+   "\"\\!\\(\\*RowBox[{\\\"\[Del]\\\", \\\"\[CenterDot]\\\", \
+RowBox[{\\\"[\\\", RowBox[{\\\"v\\\", \\\"\[RightVector]\\\"}], \\\"]\\\"}]}]\
+\\) cannot be interpreted. The prefix operator \
+\\!\\(\\*RowBox[{\\\"\[Del]\\\"}]\\) cannot be combined with the binary \
+operator \\!\\(\\*RowBox[{\\\"\\\\\\\"\[CenterDot]\\\\\\\"\\\"}]\\).\"", 2, 4,
+    7, 32758862535949896707, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.865138187763474*^9, 3.8651399599280553`*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"80102cc3-6c81-470e-a821-b982e735896e"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Diese Gleichungen in obiger Reihenfolge lauten formuliert: Die Divergenz \
+des magnetischen Feldes ",
+ Cell[BoxData[
+  OverscriptBox["B", "\[RightVector]"]],
+  CellChangeTimes->{{3.8651374569474773`*^9, 3.865137520557308*^9}, {
+    3.865138159385531*^9, 3.865138258162797*^9}, {3.865138306042659*^9, 
+    3.865138403442255*^9}, {3.865138477077242*^9, 3.865138612524542*^9}, {
+    3.865138724799221*^9, 3.865138731832402*^9}, {3.865139730069773*^9, 
+    3.865139749216598*^9}, {3.8651398469619064`*^9, 3.8651398523383074`*^9}, {
+    3.865139901936945*^9, 3.865139964732957*^9}, {3.865140025310794*^9, 
+    3.8651400503543167`*^9}, {3.86514044577757*^9, 3.865140483358333*^9}, {
+    3.865140532840683*^9, 3.8651405340371485`*^9}, {3.865140637746815*^9, 
+    3.8651407259860373`*^9}, {3.8651409432168984`*^9, 3.865140970614452*^9}, {
+    3.8651411027713456`*^9, 3.8651411392669697`*^9}, {3.865141179214129*^9, 
+    3.865141220962923*^9}, 3.865141625824688*^9, {3.8652180475262055`*^9, 
+    3.8652180525128536`*^9}},ExpressionUUID->
+  "30370ffb-4263-4857-9c6b-3d100b8f6aa0"],
+ " verschwindet, es gibt keine magnetischen Monopole und die Felder sind \
+somit quellenfrei . Die Divergenz der elektrischen Flussdichte ",
+ Cell[BoxData[
+  OverscriptBox["D", "\[RightVector]"]],
+  CellChangeTimes->{{3.8651374569474773`*^9, 3.865137520557308*^9}, {
+    3.865138159385531*^9, 3.865138258162797*^9}, {3.865138306042659*^9, 
+    3.865138403442255*^9}, {3.865138477077242*^9, 3.865138612524542*^9}, {
+    3.865138724799221*^9, 3.865138731832402*^9}, {3.865139730069773*^9, 
+    3.865139749216598*^9}, {3.8651398469619064`*^9, 3.8651398523383074`*^9}, {
+    3.865139901936945*^9, 3.865139964732957*^9}, {3.865140025310794*^9, 
+    3.8651400503543167`*^9}, {3.86514044577757*^9, 3.865140483358333*^9}, {
+    3.865140532840683*^9, 3.8651405340371485`*^9}, {3.865140637746815*^9, 
+    3.8651407259860373`*^9}, {3.8651409432168984`*^9, 3.865140970614452*^9}, {
+    3.8651411027713456`*^9, 3.8651411392669697`*^9}, {3.865141179214129*^9, 
+    3.865141220962923*^9}, 3.865141625824688*^9, {3.8652180475262055`*^9, 
+    3.8652180525128536`*^9}},ExpressionUUID->
+  "3c6c1d3c-894e-4c0a-a9a2-95cadcf496e8"],
+ " ist gleich der Ladungsdichte \[Rho] der eingeschlossenen Raumladung, also \
+sind Ladungen Quellen dieses Feldes. \nDas Induktionsgesetz von Faraday \
+besagt, dass negative zeitliche \[CapitalADoubleDot]nderungen ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["\[PartialD]", 
+     RowBox[{"\[PartialD]", "t"}]]}], "\[CenterDot]", 
+   OverscriptBox["B", "\[RightVector]"]}]],
+  CellChangeTimes->{{3.8651374569474773`*^9, 3.865137520557308*^9}, {
+    3.865138159385531*^9, 3.865138258162797*^9}, {3.865138306042659*^9, 
+    3.865138403442255*^9}, {3.865138477077242*^9, 3.865138612524542*^9}, {
+    3.865138724799221*^9, 3.865138731832402*^9}, {3.865139730069773*^9, 
+    3.865139749216598*^9}, {3.8651398469619064`*^9, 3.8651398523383074`*^9}, {
+    3.865139901936945*^9, 3.865139964732957*^9}, {3.865140025310794*^9, 
+    3.8651400503543167`*^9}, {3.86514044577757*^9, 3.865140483358333*^9}, {
+    3.865140532840683*^9, 3.8651405340371485`*^9}, {3.865140637746815*^9, 
+    3.8651407259860373`*^9}, {3.8651409432168984`*^9, 3.865140970614452*^9}, {
+    3.8651411027713456`*^9, 3.8651411392669697`*^9}, {3.865141179214129*^9, 
+    3.865141220962923*^9}, 3.865141625824688*^9, {3.8652180475262055`*^9, 
+    3.8652180525128536`*^9}},ExpressionUUID->
+  "f1bd63b0-e832-4ed2-899c-4f353fa29922"],
+ " des magnetischen Flusses ein elektrisches Wirbelfeld ",
+ Cell[BoxData[
+  RowBox[{"\[Del]", "\[Cross]", 
+   OverscriptBox["E", "\[RightVector]"], " "}]],
+  CellChangeTimes->{{3.8651374569474773`*^9, 3.865137520557308*^9}, {
+    3.865138159385531*^9, 3.865138258162797*^9}, {3.865138306042659*^9, 
+    3.865138403442255*^9}, {3.865138477077242*^9, 3.865138612524542*^9}, {
+    3.865138724799221*^9, 3.865138731832402*^9}, {3.865139730069773*^9, 
+    3.865139749216598*^9}, {3.8651398469619064`*^9, 3.8651398523383074`*^9}, {
+    3.865139901936945*^9, 3.865139964732957*^9}, {3.865140025310794*^9, 
+    3.8651400503543167`*^9}, {3.86514044577757*^9, 3.865140483358333*^9}, {
+    3.865140532840683*^9, 3.8651405340371485`*^9}, {3.865140637746815*^9, 
+    3.8651407259860373`*^9}, {3.8651409432168984`*^9, 3.865140970614452*^9}, {
+    3.8651411027713456`*^9, 3.8651411392669697`*^9}, {3.865141179214129*^9, 
+    3.865141220962923*^9}, 3.865141625824688*^9, {3.8652180475262055`*^9, 
+    3.8652180525128536`*^9}},ExpressionUUID->
+  "28cc384b-a93a-4569-9507-21606131020d"],
+ "herbeif\[UDoubleDot]hren.\nUnd abschlie\[SZ]end: jedes magnetische \
+Wirbelfeld ",
+ Cell[BoxData[
+  RowBox[{"\[Del]", "\[Cross]", 
+   OverscriptBox["H", "\[RightVector]"]}]],
+  CellChangeTimes->{{3.8651374569474773`*^9, 3.865137520557308*^9}, {
+    3.865138159385531*^9, 3.865138258162797*^9}, {3.865138306042659*^9, 
+    3.865138403442255*^9}, {3.865138477077242*^9, 3.865138612524542*^9}, {
+    3.865138724799221*^9, 3.865138731832402*^9}, {3.865139730069773*^9, 
+    3.865139749216598*^9}, {3.8651398469619064`*^9, 3.8651398523383074`*^9}, {
+    3.865139901936945*^9, 3.865139964732957*^9}, {3.865140025310794*^9, 
+    3.8651400503543167`*^9}, {3.86514044577757*^9, 3.865140483358333*^9}, {
+    3.865140532840683*^9, 3.8651405340371485`*^9}, {3.865140637746815*^9, 
+    3.8651407259860373`*^9}, {3.8651409432168984`*^9, 3.865140970614452*^9}, {
+    3.8651411027713456`*^9, 3.8651411392669697`*^9}, {3.865141179214129*^9, 
+    3.865141220962923*^9}, 3.865141625824688*^9, {3.8652180475262055`*^9, 
+    3.8652180525128536`*^9}},ExpressionUUID->
+  "e2ade530-15e0-4368-b80e-b3f9cb5ba7db"],
+ " f\[UDoubleDot]hrt zu elektrischen Str\[ODoubleDot]men ",
+ Cell[BoxData[
+  OverscriptBox["j", "\[RightVector]"]],
+  CellChangeTimes->{{3.8651374569474773`*^9, 3.865137520557308*^9}, {
+    3.865138159385531*^9, 3.865138258162797*^9}, {3.865138306042659*^9, 
+    3.865138403442255*^9}, {3.865138477077242*^9, 3.865138612524542*^9}, {
+    3.865138724799221*^9, 3.865138731832402*^9}, {3.865139730069773*^9, 
+    3.865139749216598*^9}, {3.8651398469619064`*^9, 3.8651398523383074`*^9}, {
+    3.865139901936945*^9, 3.865139964732957*^9}, {3.865140025310794*^9, 
+    3.8651400503543167`*^9}, {3.86514044577757*^9, 3.865140483358333*^9}, {
+    3.865140532840683*^9, 3.8651405340371485`*^9}, {3.865140637746815*^9, 
+    3.8651407259860373`*^9}, {3.8651409432168984`*^9, 3.865140970614452*^9}, {
+    3.8651411027713456`*^9, 3.8651411392669697`*^9}, {3.865141179214129*^9, 
+    3.865141220962923*^9}, 3.865141625824688*^9, {3.8652180475262055`*^9, 
+    3.8652180525128536`*^9}},ExpressionUUID->
+  "e91d0440-4601-4ea4-8e2e-d541b3cefd3a"],
+ " bzw sich zeitlich \[ADoubleDot]ndernden elektrischen Flussdichten ",
+ Cell[BoxData[
+  RowBox[{
+   FractionBox["\[PartialD]", 
+    RowBox[{"\[PartialD]", "t"}]], 
+   OverscriptBox["D", "\[RightVector]"]}]],
+  CellChangeTimes->{{3.8651374569474773`*^9, 3.865137520557308*^9}, {
+    3.865138159385531*^9, 3.865138258162797*^9}, {3.865138306042659*^9, 
+    3.865138403442255*^9}, {3.865138477077242*^9, 3.865138612524542*^9}, {
+    3.865138724799221*^9, 3.865138731832402*^9}, {3.865139730069773*^9, 
+    3.865139749216598*^9}, {3.8651398469619064`*^9, 3.8651398523383074`*^9}, {
+    3.865139901936945*^9, 3.865139964732957*^9}, {3.865140025310794*^9, 
+    3.8651400503543167`*^9}, {3.86514044577757*^9, 3.865140483358333*^9}, {
+    3.865140532840683*^9, 3.8651405340371485`*^9}, {3.865140637746815*^9, 
+    3.8651407259860373`*^9}, {3.8651409432168984`*^9, 3.865140970614452*^9}, {
+    3.8651411027713456`*^9, 3.8651411392669697`*^9}, {3.865141179214129*^9, 
+    3.865141220962923*^9}, 3.865141625824688*^9, {3.8652180475262055`*^9, 
+    3.8652180525128536`*^9}},ExpressionUUID->
+  "c0d1b734-6445-4e26-b033-8bcaa9f39704"],
+ ", was auch als erweitertes Amperesches Gesetz bezeichnet wird.\nIn linearer \
+ungeladener homogener Materie verschwinden die freie Ladungs- und \
+Stromdichte. Es gilt somit:"
+}], "Text",
+ CellChangeTimes->{{3.865141211106857*^9, 3.865141227614997*^9}, 
+   3.8651414493842545`*^9, {3.865217572357808*^9, 3.865217811593198*^9}, {
+   3.8652178657943835`*^9, 3.86521791127137*^9}, {3.865217944506047*^9, 
+   3.865218265191499*^9}},ExpressionUUID->"df20a937-7d6c-49a7-8fcb-\
+bb553820fe6c"],
+
+Cell[BoxData[{
+ RowBox[{"\[Rho]", "=", "0"}], "\[IndentingNewLine]", 
+ RowBox[{
+  OverscriptBox["j", "\[RightVector]"], "=", "0"}], "\[IndentingNewLine]", 
+ RowBox[{
+  OverscriptBox["B", "\[RightVector]"], "=", " ", 
+  RowBox[{
+   OverscriptBox["H", "\[RightVector]"], " ", 
+   SubscriptBox["\[Mu]", "0"], "\[Mu]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  OverscriptBox["D", "\[RightVector]"], "=", 
+  RowBox[{
+   SubscriptBox["\[Epsilon]", "0"], " ", "\[Epsilon]", " ", 
+   OverscriptBox["E", "\[RightVector]"]}]}]}], "Input",
+ CellChangeTimes->{{3.8651412451097713`*^9, 3.865141277556044*^9}, {
+   3.8651413561755257`*^9, 3.8651414365728025`*^9}, 3.8651415891093683`*^9, {
+   3.865216773716276*^9, 
+   3.865216797524086*^9}},ExpressionUUID->"20c1325c-41a1-49be-bd6e-\
+1290a6f5139a"],
+
+Cell["\<\
+Verwenden dieser Relation in den 4 Maxwell Gleichungen liefert folgende \
+Modifikationen:\
+\>", "Text",
+ CellChangeTimes->{{3.8651415000191126`*^9, 
+  3.865141526583313*^9}},ExpressionUUID->"1869ea9f-c7ee-402e-b8a8-\
+2075a1a5dd1e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Del]", "\[CenterDot]", 
+   OverscriptBox["B", "\[RightVector]"]}], " ", "=", 
+  "0"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Del]", "\[CenterDot]", 
+   OverscriptBox["E", "\[RightVector]"]}], " ", "=", 
+  "0"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Del]", "\[Cross]", 
+   OverscriptBox["B", "\[RightVector]"]}], " ", "=", 
+  RowBox[{
+   SubscriptBox["\[Mu]", "0"], "\[Mu]", " ", 
+   SubscriptBox["\[Epsilon]", "0"], " ", "\[Epsilon]", 
+   RowBox[{
+    FractionBox["\[PartialD]", 
+     RowBox[{"\[PartialD]", "t"}]], 
+    OverscriptBox["E", "\[RightVector]"]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Del]", "\[Cross]", 
+   OverscriptBox["E", "\[RightVector]"]}], " ", "=", 
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["\[PartialD]", 
+     RowBox[{"\[PartialD]", "t"}]]}], "\[CenterDot]", 
+   OverscriptBox["B", "\[RightVector]"]}]}]}], "Input",
+ CellChangeTimes->{{3.865141559103902*^9, 3.8651416292292423`*^9}, {
+   3.8651423772193546`*^9, 3.86514237844029*^9}, 
+   3.8651425360454655`*^9},ExpressionUUID->"e1ac65ee-c1ae-42bc-9af3-\
+1aafb653ee93"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wellengleichung", "Subtitle",
+ CellChangeTimes->{{3.8651421834292088`*^9, 
+  3.865142188101486*^9}},ExpressionUUID->"88939896-6198-4e96-9523-\
+21dbea47ebdf"],
+
+Cell["\<\
+Zun\[ADoubleDot]chst bildet man die doppelte Rotation des E-Feldes unter \
+Verwendung der sogenannten BAC-CAB-Regel und dem Vertauschen von Rotation und \
+partieller Ableitung:\
+\>", "Text",
+ CellChangeTimes->{{3.865142263798972*^9, 3.865142299859423*^9}, {
+  3.865142357142062*^9, 3.8651423612822165`*^9}, {3.865142591785121*^9, 
+  3.8651426375672245`*^9}},ExpressionUUID->"2165924a-3ff3-40aa-b357-\
+1b35ef8cfae3"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Del]", "\[Cross]", 
+   RowBox[{"(", 
+    RowBox[{"\[Del]", "\[Cross]", 
+     OverscriptBox["E", "\[RightVector]"]}], ")"}]}], "=", 
+  RowBox[{"\[Del]", "\[Cross]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[PartialD]", 
+       RowBox[{"\[PartialD]", "t"}]]}], "\[CenterDot]", 
+     OverscriptBox["B", "\[RightVector]"]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Del]", "\[CenterDot]", 
+    RowBox[{"(", 
+     RowBox[{"\[Del]", "\[CenterDot]", 
+      OverscriptBox["E", "\[RightVector]"]}], " ", ")"}]}], "-", 
+   RowBox[{"\[Laplacian]", 
+    OverscriptBox["E", "\[RightVector]"]}]}], "=", " ", 
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["\[PartialD]", 
+     RowBox[{"\[PartialD]", "t"}]]}], "\[CenterDot]", 
+   RowBox[{"(", 
+    RowBox[{"\[Del]", "\[Cross]", 
+     OverscriptBox["B", "\[RightVector]"]}], ")"}]}]}]}], "Input",
+ CellChangeTimes->{{3.865142385101198*^9, 3.865142424634946*^9}, {
+  3.865142469116592*^9, 3.8651425718742013`*^9}, {3.8651469932423415`*^9, 
+  3.8651469946757545`*^9}},ExpressionUUID->"63c5bba6-720e-4302-9c0f-\
+894d13e10369"],
+
+Cell[TextData[{
+ "Nun l\[ADoubleDot]sst sich jeweils der Ausdruck f\[UDoubleDot]r die \
+Divergenz von ",
+ Cell[BoxData[
+  OverscriptBox["E", "\[RightVector]"]],
+  CellChangeTimes->{{3.865142385101198*^9, 3.865142424634946*^9}, {
+   3.865142469116592*^9, 3.8651425718742013`*^9}},ExpressionUUID->
+  "b5b75f89-746c-44d0-b211-22d5c312df6b"],
+ " und f\[UDoubleDot]r die Rotation von ",
+ Cell[BoxData[
+  OverscriptBox["B", "\[RightVector]"]],
+  CellChangeTimes->{{3.865142385101198*^9, 3.865142424634946*^9}, {
+   3.865142469116592*^9, 3.8651425718742013`*^9}},ExpressionUUID->
+  "deccade3-a10f-4689-acbb-87156796faf6"],
+ " durch die jeweilige Maxwell Gleichung ersetzen:"
+}], "Text",
+ CellChangeTimes->{{3.8651426825371227`*^9, 
+  3.86514276848044*^9}},ExpressionUUID->"758a0933-017a-4f2e-9923-\
+903f901ddad4"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Laplacian]", 
+   OverscriptBox["E", "\[RightVector]"]}], "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     SubscriptBox["\[Mu]", "0"]}], "\[Mu]", " ", 
+    SubscriptBox["\[Epsilon]", "0"], " ", "\[Epsilon]", " ", 
+    RowBox[{
+     FractionBox["\[PartialD]", 
+      RowBox[{"\[PartialD]", "t"}]], 
+     RowBox[{"\[CenterDot]", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox["\[PartialD]", 
+         RowBox[{"\[PartialD]", "t"}]], 
+        OverscriptBox["E", "\[RightVector]"]}], ")"}]}]}]}], "=", " ", 
+   RowBox[{
+    RowBox[{"-", 
+     SubscriptBox["\[Mu]", "0"]}], "\[Mu]", " ", 
+    SubscriptBox["\[Epsilon]", "0"], " ", "\[Epsilon]", " ", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["\[PartialD]", "2"], 
+      RowBox[{"\[PartialD]", 
+       SuperscriptBox["t", "2"]}]], 
+     OverscriptBox["E", "\[RightVector]"]}]}]}]}]], "Input",
+ CellChangeTimes->{
+  3.865142794369579*^9, {3.8651459828476157`*^9, 3.8651460221603265`*^9}, {
+   3.865146091796816*^9, 3.8651461368269763`*^9}, {3.86514698996814*^9, 
+   3.865146990075163*^9}},ExpressionUUID->"1070147e-2ea7-42a4-9554-\
+cd226eef4d55"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8651427874438353`*^9, 3.8651427888125362`*^9}, {
+  3.8651461774738755`*^9, 
+  3.865146179066245*^9}},ExpressionUUID->"a8a12234-e10e-4f47-a0b7-\
+91045c21b330"],
+
+Cell[TextData[{
+ "Nun kann man den Vorfaktor mit der Lichtgeschwindigkeit im Medium ",
+ Cell[BoxData[
+  SuperscriptBox["c", "'"]],
+  CellChangeTimes->{{3.8651463048430104`*^9, 3.8651463639242783`*^9}, {
+   3.865146548495718*^9, 3.8651465690341597`*^9}, {3.865146602920542*^9, 
+   3.8651466467869253`*^9}, {3.865146804377939*^9, 3.8651469197300773`*^9}, {
+   3.865146986139752*^9, 3.8651469862595253`*^9}, {3.8651470170720606`*^9, 
+   3.8651470174202347`*^9}, {3.8651472979546323`*^9, 3.865147318708993*^9}},
+  ExpressionUUID->"917cbac0-ba2b-4e9b-a134-eca47ebb8bc9"],
+ " identifizieren, wobei der hierf\[UDoubleDot]r spezifischeBrechungsindex n \
+eingef\[UDoubleDot]hrt wird und man erh\[ADoubleDot]lt die gesuchte \
+Wellengleichung f\[UDoubleDot]r das elektrische Feld:"
+}], "Text",
+ CellChangeTimes->{{3.865146190724394*^9, 3.8651462389819655`*^9}, {
+  3.86514667664098*^9, 3.865146705426696*^9}, {3.8652174474196377`*^9, 
+  3.865217520296565*^9}},ExpressionUUID->"6191fa17-0e0d-4655-9993-\
+412b8fdaea23"],
+
+Cell[BoxData[{
+ RowBox[{
+  SuperscriptBox["c", "'"], "=", 
+  RowBox[{
+   FractionBox["c", "n"], "=", 
+   RowBox[{
+    FractionBox["c", 
+     SqrtBox[
+      RowBox[{"\[Mu]", " ", "\[Epsilon]"}]]], "=", 
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubscriptBox["\[Mu]", "0"], "\[Mu]", " ", 
+       SubscriptBox["\[Epsilon]", "0"], " ", 
+       "\[Epsilon]"}]]]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Laplacian]", 
+      RowBox[{"-", 
+       FractionBox["1", 
+        SuperscriptBox["c", "'"]]}]}], 
+     FractionBox[
+      SuperscriptBox["\[PartialD]", "2"], 
+      RowBox[{"\[PartialD]", 
+       SuperscriptBox["t", "2"]}]]}], ")"}], 
+   OverscriptBox["E", "\[RightVector]"]}], " ", "=", 
+  RowBox[{
+   RowBox[{"\[Square]", 
+    OverscriptBox["E", "\[RightVector]"]}], "=", "0"}]}]}], "Input",
+ CellChangeTimes->{{3.8651463048430104`*^9, 3.8651463639242783`*^9}, {
+  3.865146548495718*^9, 3.8651465690341597`*^9}, {3.865146602920542*^9, 
+  3.8651466467869253`*^9}, {3.865146804377939*^9, 3.8651469197300773`*^9}, {
+  3.865146986139752*^9, 3.8651469862595253`*^9}, {3.8651470170720606`*^9, 
+  3.8651470174202347`*^9}, {3.8651472979546323`*^9, 
+  3.865147318708993*^9}},ExpressionUUID->"533fa6e7-cd63-4c9a-a96d-\
+d2e2046a19cc"],
+
+Cell["\<\
+Diese Wellengleichung wird nun zum Beispiel f\[UDoubleDot]r ebene oder \
+Kugelwellen gel\[ODoubleDot]st. M\[ODoubleDot]chte man jedoch Probleme mit \
+expliziten Anfangsbedingungen l\[ODoubleDot]sen, wie beispielsweise die \
+Propagation von Wellen durch optische Elemente wie Linsen oder Gitter, dann \
+ist die Herleitung m\[ODoubleDot]glicher L\[ODoubleDot]sungen lediglich in \
+numerischer Form aufgrund der hohen Komplexit\[ADoubleDot]t empfehlenswert. \
+Das folgende Modul soll anhand gegebener Randbedingungen genau das tun. Es \
+wird zun\[ADoubleDot]chst eine Funktion f\[UDoubleDot]r den Brechungsindex \
+\[UDoubleDot]bergeben, dann die Anzahl und Gr\[ODoubleDot]\[SZ]e der Zeit- \
+und Raumschritte und zuletzt eine Liste mit den Randbedingungen:\
+\>", "Text",
+ CellChangeTimes->{{3.8651485355360208`*^9, 3.8651486744157925`*^9}, {
+  3.8652314633910294`*^9, 3.865231493016167*^9}, {3.865231909930018*^9, 
+  3.865231998972497*^9}},ExpressionUUID->"47aab541-f4da-4060-8de8-\
+ff875ee24631"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8652168763114767`*^9, 3.865216910354905*^9}, {
+  3.865216952965889*^9, 3.8652170032528105`*^9}, {3.865217065164998*^9, 
+  3.8652171521049957`*^9}, {3.8652172921155043`*^9, 
+  3.8652173943109846`*^9}},ExpressionUUID->"e5ad2d5b-1e45-4f78-bb8c-\
+492ad6a2f704"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FTCSSolve", "[", 
+   RowBox[{
+   "nfun", ",", "tN", ",", "tDel", ",", " ", "xN", ",", " ", "xDel", ",", 
+    "yN", ",", "yDel", ",", " ", "randb"}], "]"}], ":=", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"c", ",", "zSolved"}], "}"}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"c", "=", "1"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"c", "*", 
+            RowBox[{"tDel", "/", "xDel"}]}], ")"}], "^", "2"}], ">", 
+         RowBox[{"1", "/", "2"}]}], "&&", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"c", "*", 
+            RowBox[{"tDel", "/", "yDel"}]}], ")"}], "^", "2"}], ">", 
+         RowBox[{"1", "/", "2"}]}]}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"stabilit\[ADoubleDot]t", "::", "ung\[UDoubleDot]ltig"}], 
+         "=", "\"\<Stabilit\[ADoubleDot]tskriterium verletzt.\>\""}], ";", 
+        RowBox[{"Message", "[", 
+         RowBox[{"stabilit\[ADoubleDot]t", "::", "ung\[UDoubleDot]ltig"}], 
+         "]"}], ";"}], ",", "Null"}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+      "Rekursionsformel", " ", "basierend", " ", "auf", " ", "den", " ", 
+       "zentrierten", " ", "Dreipunktformen", " ", "der", " ", "zweiten", " ",
+        "partiellen", " ", "Ableitungen", " ", "nach", " ", "Zeit", " ", 
+       "und", " ", "Raumkoordinaten"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"z", "[", 
+       RowBox[{"i_", ",", "j_", ",", "p_"}], "]"}], ":=", 
+      RowBox[{
+       RowBox[{"z", "[", 
+        RowBox[{"i", ",", "j", ",", "p"}], "]"}], "=", " ", 
+       RowBox[{
+        RowBox[{"2", 
+         RowBox[{"z", "[", 
+          RowBox[{"i", ",", "j", ",", 
+           RowBox[{"p", "-", "1"}]}], "]"}]}], "-", 
+        RowBox[{"z", "[", 
+         RowBox[{"i", ",", "j", ",", 
+          RowBox[{"p", "-", "2"}]}], "]"}], "+", 
+        RowBox[{
+         RowBox[{"tDel", "^", "2"}], "*", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"c", "/", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"nfun", "[", 
+               RowBox[{
+                RowBox[{"i", " ", "xDel"}], ",", 
+                RowBox[{"j", " ", "yDel"}]}], "]"}], "*", "xDel"}], ")"}]}], 
+           ")"}], "^", "2"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"z", "[", 
+            RowBox[{
+             RowBox[{"i", "+", "1"}], ",", "j", ",", 
+             RowBox[{"p", "-", "1"}]}], "]"}], "-", 
+           RowBox[{"2", 
+            RowBox[{"z", "[", 
+             RowBox[{"i", ",", "j", ",", 
+              RowBox[{"p", "-", "1"}]}], "]"}]}], "+", 
+           RowBox[{"z", "[", 
+            RowBox[{
+             RowBox[{"i", "-", "1"}], ",", "j", ",", 
+             RowBox[{"m", "-", "1"}]}], "]"}]}], ")"}]}], "+", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"tDel", "^", "2"}], "*", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"c", "/", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"nfun", "[", 
+               RowBox[{
+                RowBox[{"i", " ", "xDel"}], ",", 
+                RowBox[{"j", " ", "yDel"}]}], "]"}], "yDel"}], ")"}]}], ")"}],
+           "^", "2"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"z", "[", 
+            RowBox[{"i", ",", 
+             RowBox[{"j", "+", "1"}], ",", 
+             RowBox[{"p", "-", "1"}]}], "]"}], "-", 
+           RowBox[{"2", 
+            RowBox[{"z", "[", 
+             RowBox[{"i", ",", "j", ",", 
+              RowBox[{"p", "-", "1"}]}], "]"}]}], "+", 
+           RowBox[{"z", "[", 
+            RowBox[{"i", ",", 
+             RowBox[{"j", "-", "1"}], ",", 
+             RowBox[{"m", "-", "1"}]}], "]"}]}], ")"}]}]}]}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"zSolved", " ", "=", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"z", "[", 
+         RowBox[{"i", ",", "j", ",", "p"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "0", ",", "xN"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "0", ",", "yN"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"p", ",", "o", ",", "tN"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Clear", "[", "z", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "zSolved", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.865230675292982*^9, 3.865230742894581*^9}, {
+   3.86523088452817*^9, 3.865231221587331*^9}, {3.865231264473488*^9, 
+   3.865231271685277*^9}, {3.865231419593314*^9, 3.8652314433853846`*^9}, {
+   3.8652315073973083`*^9, 3.865231581145918*^9}, {3.865231619973507*^9, 
+   3.8652316409189715`*^9}, {3.8652316747501884`*^9, 3.865231779805371*^9}, {
+   3.8652318589649286`*^9, 3.8652318907213535`*^9}, {3.8652320454540005`*^9, 
+   3.865232082262611*^9}, {3.86523219123708*^9, 3.8652322021738334`*^9}, {
+   3.86523225601683*^9, 3.8652322906757164`*^9}, {3.865232455867072*^9, 
+   3.8652324564830885`*^9}, {3.8652325053186207`*^9, 3.865232526875372*^9}, {
+   3.8652491182117186`*^9, 3.865249189868827*^9}, {3.8652493666385636`*^9, 
+   3.865249369104415*^9}, {3.8652494139520226`*^9, 3.86524953032413*^9}, {
+   3.865249630273428*^9, 3.865249858403708*^9}, {3.8652602891160293`*^9, 
+   3.8652605011784325`*^9}, {3.865260557177268*^9, 3.8652606875308*^9}, 
+   3.8652607402995076`*^9, 3.8652607711390896`*^9, {3.8652608251808596`*^9, 
+   3.865260933757432*^9}, {3.8652610257069736`*^9, 3.86526111897441*^9}, {
+   3.865261199148219*^9, 3.8652612685673904`*^9}, {3.86526430770548*^9, 
+   3.865264338380954*^9}, {3.8653133432099304`*^9, 3.8653133434565535`*^9}, {
+   3.8653917227059855`*^9, 3.865391773864564*^9}, {3.8653919103755875`*^9, 
+   3.8653919127200603`*^9}},ExpressionUUID->"55f221d3-87fc-49f1-a56b-\
+20f5e59ceb71"],
+
+Cell["\<\
+Nun sollen L\[ODoubleDot]sungen der Gleichungen dargestellt werden mittels \
+eines 3D-Plots\
+\>", "Text",
+ CellChangeTimes->{{3.8653918068385396`*^9, 3.865391811932354*^9}, {
+  3.865391920123967*^9, 
+  3.865391955857897*^9}},ExpressionUUID->"5b4c379a-8eab-4fcc-b86c-\
+4c5998619762"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"FCTSPlot", "[", 
+     RowBox[{
+     "nfun", ",", "tN", ",", "tDel", ",", "xN", ",", " ", "xDel", ",", " ", 
+      "yN", ",", " ", "YDel", ",", " ", "randb"}], "]"}], ":=", 
+    RowBox[{"DynamicModule", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"xleng", ",", "yleng", ",", "zSolved", ",", "zInterpolation"}],
+        "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"zSolved", "=", 
+        RowBox[{"FTCSSolve", "[", 
+         RowBox[{
+         "nfun", ",", "tN", ",", "tDel", ",", " ", "xN", ",", " ", "xDel", 
+          ",", "yN", ",", "yDel", ",", " ", "randb"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"xleng", "=", 
+        RowBox[{"xN", "*", "xDel"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"yleng", "=", 
+        RowBox[{"yN", "*", "yDel"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"zInterpolation", "[", "p_", "]"}], ":=", 
+        RowBox[{
+         RowBox[{"zInterpolation", "[", "p", "]"}], "=", " ", 
+         RowBox[{"Interpolation", "[", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"i", " ", "xDel"}], ",", " ", 
+                RowBox[{"j", " ", "yDel"}], ",", " ", 
+                RowBox[{"zSolved", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"i", ",", "j", ",", "p"}], "]"}], "]"}]}], "}"}], 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "0", ",", "xN"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"j", ",", "0", ",", "yN"}], "}"}]}], "]"}], ",", "1"}],
+            "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Animate", "[", 
+        RowBox[{
+         RowBox[{"Show", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Plot3D", "[", 
+            RowBox[{
+             RowBox[{"Evaluate", "[", 
+              RowBox[{
+               RowBox[{"zInterpolation", "[", "p", "]"}], "[", 
+               RowBox[{"x", ",", "y"}], "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "0", ",", "xleng"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"y", ",", "0", ",", "yleng"}], "}"}], ",", 
+             RowBox[{"PlotPoints", "->", "100"}], ",", " ", 
+             RowBox[{"PlotRange", "->", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "5"}], ",", "5"}], "}"}]}], ",", 
+             RowBox[{"Mesh", "->", "False"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"Plot3D", "[", 
+            RowBox[{"0", ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "0", ",", "xleng"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"y", ",", "0", ",", "yleng"}], "}"}], ",", 
+             RowBox[{"ColorFunction", "\[Rule]", "\"\<Rainbow\>\""}], ",", 
+             RowBox[{"Mesh", "->", "True"}], ",", 
+             RowBox[{"Boxed", "->", "False"}]}], "]"}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"m", ",", "0", ",", "tN", ",", "2"}], "}"}]}], "]"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], ";"}], InputForm]], "Input",
+ CellChangeTimes->{{3.865391842680442*^9, 
+  3.8653918564631834`*^9}},ExpressionUUID->"a2f417ac-75dd-4cf3-bdf7-\
+c961aae4c912"]
+}, Open  ]]
+},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (February 4, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a73ed756-1983-4b0b-9d0b-94e7743e528e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 228, 4, 80, "Subtitle",ExpressionUUID->"e64dcb6c-8acd-48ab-81f5-c0e223887505"],
+Cell[811, 28, 190, 3, 53, "Subtitle",ExpressionUUID->"d2e0e79b-6b55-4346-bd92-06aa6fa2d034"],
+Cell[1004, 33, 373, 8, 35, "Text",ExpressionUUID->"42937def-ec39-4c76-8dfe-664ad7c456c0"],
+Cell[CellGroupData[{
+Cell[1402, 45, 1763, 38, 131, "Input",ExpressionUUID->"dee939d9-a0a6-4c09-a828-20259d82c0e2"],
+Cell[3168, 85, 646, 13, 28, "Message",ExpressionUUID->"80102cc3-6c81-470e-a821-b982e735896e"]
+}, Open  ]],
+Cell[3829, 101, 8307, 135, 184, "Text",ExpressionUUID->"df20a937-7d6c-49a7-8fcb-bb553820fe6c"],
+Cell[12139, 238, 783, 18, 95, "Input",ExpressionUUID->"20c1325c-41a1-49be-bd6e-1290a6f5139a"],
+Cell[12925, 258, 241, 6, 35, "Text",ExpressionUUID->"1869ea9f-c7ee-402e-b8a8-2075a1a5dd1e"],
+Cell[13169, 266, 1117, 30, 131, "Input",ExpressionUUID->"e1ac65ee-c1ae-42bc-9af3-1aafb653ee93"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14323, 301, 163, 3, 53, "Subtitle",ExpressionUUID->"88939896-6198-4e96-9523-21dbea47ebdf"],
+Cell[14489, 306, 425, 8, 58, "Text",ExpressionUUID->"2165924a-3ff3-40aa-b357-1b35ef8cfae3"],
+Cell[14917, 316, 1151, 31, 86, "Input",ExpressionUUID->"63c5bba6-720e-4302-9c0f-894d13e10369"],
+Cell[16071, 349, 806, 18, 35, "Text",ExpressionUUID->"758a0933-017a-4f2e-9923-903f901ddad4"],
+Cell[16880, 369, 1148, 32, 49, "Input",ExpressionUUID->"1070147e-2ea7-42a4-9554-cd226eef4d55"],
+Cell[18031, 403, 207, 4, 28, "Input",ExpressionUUID->"a8a12234-e10e-4f47-a0b7-91045c21b330"],
+Cell[18241, 409, 1006, 17, 58, "Text",ExpressionUUID->"6191fa17-0e0d-4655-9993-412b8fdaea23"],
+Cell[19250, 428, 1297, 37, 99, "Input",ExpressionUUID->"533fa6e7-cd63-4c9a-a96d-d2e2046a19cc"],
+Cell[20550, 467, 1003, 15, 104, "Text",ExpressionUUID->"47aab541-f4da-4060-8de8-ff875ee24631"],
+Cell[21556, 484, 306, 5, 28, "Input",ExpressionUUID->"e5ad2d5b-1e45-4f78-bb8c-492ad6a2f704"],
+Cell[21865, 491, 6119, 145, 428, "Input",ExpressionUUID->"55f221d3-87fc-49f1-a56b-20f5e59ceb71",
+ InitializationCell->True],
+Cell[27987, 638, 292, 7, 35, "Text",ExpressionUUID->"5b4c379a-8eab-4fcc-b86c-4c5998619762"],
+Cell[28282, 647, 3456, 82, 272, "Input",ExpressionUUID->"a2f417ac-75dd-4cf3-bdf7-c961aae4c912"]
+}, Open  ]]
+}
+]
+*)
+
